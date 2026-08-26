@@ -464,11 +464,7 @@ textarea:focus {
     width: 75%;
     margin: 120px auto 0;
 }
-.projects-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+
 .projects-container h2{
      width: 100%;
     text-align: center;
@@ -477,30 +473,40 @@ textarea:focus {
     margin-bottom: 20px;
    
 }
-.project-container h2{
-    color: #00d9e5;
-    font-size: 20px;
-    margin-bottom: 10px;
 
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
 }
-.project-card h3{
-    color: #00d9e5;
-    font-size: 18px;
+.project-card:hover{
+    box-shadow:
+        0 0 5px #00d9e5,
+        0 0 20px rgba(0, 217, 229, 0.4);
+
+    overflow: hidden;
+}
+.project-info {
+    padding: 20px ;
+}
+
+
+.project-info h3 {
     margin-bottom: 10px;
-   
 }
-.project-card p{
-    color: #ddd;
-    font-size: 14px;
-    line-height: 1.5;
+.project-info p {
+    line-height: 1.6;
 }
-.project-card img{
-    width: 30%;
-    height: 170px;
+.project-card img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-    border: solid #00d9e5 1px;
+}
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 .project-card img:hover{
     transform: scale(1.1);
@@ -511,30 +517,27 @@ textarea:focus {
 
     overflow: hidden;
 }
-
-@media (max-width: 768px) {
-
-    .hero-content h1 {
-        font-size: 48px;
-    }
-
-    .hero-content h1 {
-        animation:
-            honoreMoveMobile 3s ease-in-out infinite,
-            gradientMove 4s linear infinite;
-    }
-
-    @keyframes honoreMoveMobile {
-
-        0%, 100% {
-            transform: translateX(0);
-        }
-
-        50% {
-            transform: translateX(10px);
-        }
-    }
+.view-all{
+    text-align: center;
+    margin-top: 40px;
+    ;
 }
+.view-all a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.view-all a:hover {
+    background: #555;
+    color: #00d9e5;
+}
+
+
 .footer-container{
     
     display:flex;
@@ -564,4 +567,26 @@ textarea:focus {
 }
 
 
+@media (max-width: 768px) {
 
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content h1 {
+        animation:
+            honoreMoveMobile 3s ease-in-out infinite,
+            gradientMove 4s linear infinite;
+    }
+
+    @keyframes honoreMoveMobile {
+
+        0%, 100% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(10px);
+        }
+    }
+}
