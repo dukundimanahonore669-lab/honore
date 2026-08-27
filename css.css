@@ -588,5 +588,90 @@ textarea:focus {
         50% {
             transform: translateX(10px);
         }
+
+ 
     }
+.project-list {
+        grid-template-columns: 1fr;
+    }
+
+
+  
+
+    
+     
+
+    .navbar {
+        width: 90%;
+        padding: 12px 15px;
+        padding-bottom: 0;
+    }
+
+     
+    }
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+    .about-container{
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    .about-text h2 {
+    width: 100%;
+    font-size: small;
 }
+.about-image {
+        width: 100%;
+    }
+.about-image img{
+    width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15%;
+}
+.social-icons{
+    padding-top: 50pt;
+    flex-direction:row-reverse;
+
+}
+}
+
+
+
