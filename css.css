@@ -673,6 +673,34 @@ textarea:focus {
 
 }
 }
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
 
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media(max-width:768px) {
+   textarea{
+    width: 100%;
+    padding: 12px;
+    background: #111615;
+    color: white;
+    border: 1px solid #00d9e5;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+    min-height: 120px;
+
+   } 
+}
 
 
